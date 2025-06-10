@@ -1,0 +1,18 @@
+{
+    "recommendations": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.black-formatter",
+        "ms-python.pylint",
+        "ms-toolsai.jupyter",
+        "ms-vscode.cmake-tools",
+        "redhat.vscode-yaml",
+        "ms-vscode.vscode-json",
+        "streetsidesoftware.code-spell-checker",
+        "ms-vscode.hexeditor",
+        "ms-vscode-remote.remote-containers"
+    ],
+    "unwantedRecommendations": [
+        "ms-python.flake8"
+    ]
+}

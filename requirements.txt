@@ -1,0 +1,39 @@
+# Azure Kinect SDK
+pyk4a>=1.5.0
+
+# Computer Vision and Image Processing
+opencv-python>=4.8.0
+numpy>=1.24.0
+
+# 3D Processing and Visualization
+open3d>=0.17.0
+
+# Data Compression
+pillow>=10.0.0
+imageio>=2.31.0
+scikit-image>=0.21.0
+
+# Video Compression (optional)
+imageio-ffmpeg>=0.4.8
+
+# Configuration and Utilities
+pyyaml>=6.0
+click>=8.1.0
+
+# Web Streaming
+websockets>=11.0.0
+fastapi>=0.104.0
+uvicorn>=0.24.0
+
+# Development and Debugging
+matplotlib>=3.7.0
+seaborn>=0.12.0
+tqdm>=4.65.0
+
+# Code formatting and linting
+black>=23.0.0
+pylint>=2.17.0
+
+# Testing (optional)
+pytest>=7.4.0
+pytest-asyncio>=0.21.0

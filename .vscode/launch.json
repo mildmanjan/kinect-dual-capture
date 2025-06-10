@@ -1,0 +1,92 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Step 1: Single Kinect Test",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/step1_single_kinect_test.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "--duration",
+                "10"
+            ],
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/src"
+            }
+        },
+        {
+            "name": "Step 2: Single Kinect Compression",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/step2_single_kinect_compression.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "--compression",
+                "medium",
+                "--duration",
+                "10"
+            ],
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/src"
+            }
+        },
+        {
+            "name": "Step 3: Dual Kinect Test",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/step3_dual_kinect_test.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "--duration",
+                "10"
+            ],
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/src"
+            }
+        },
+        {
+            "name": "Step 4: Dual Kinect Compression",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/step4_dual_kinect_compression.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "--compression",
+                "high"
+            ],
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/src"
+            }
+        },
+        {
+            "name": "Step 5: Kinect Fusion",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/step5_kinect_fusion.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/src"
+            }
+        },
+        {
+            "name": "Quick Connection Test",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/step1_single_kinect_test.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "--test-connection"
+            ],
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/src"
+            }
+        }
+    ]
+}
