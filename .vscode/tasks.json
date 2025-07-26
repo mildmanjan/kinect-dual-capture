@@ -1,0 +1,133 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Setup: Create Virtual Environment",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "-m",
+                "venv",
+                "venv"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Setup: Install Dependencies",
+            "type": "shell",
+            "command": "${workspaceFolder}/venv/bin/pip",
+            "windows": {
+                "command": "${workspaceFolder}/venv/Scripts/pip.exe"
+            },
+            "args": [
+                "install",
+                "-r",
+                "requirements.txt"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "dependsOn": "Setup: Create Virtual Environment"
+        },
+        {
+            "label": "Test: Kinect Connection",
+            "type": "shell",
+            "command": "${workspaceFolder}/venv/bin/python",
+            "windows": {
+                "command": "${workspaceFolder}/venv/Scripts/python.exe"
+            },
+            "args": [
+                "src/step1_single_kinect_test.py",
+                "--test-connection"
+            ],
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Run: Step 1 Demo",
+            "type": "shell",
+            "command": "${workspaceFolder}/venv/bin/python",
+            "windows": {
+                "command": "${workspaceFolder}/venv/Scripts/python.exe"
+            },
+            "args": [
+                "src/step1_single_kinect_test.py",
+                "--duration",
+                "5"
+            ],
+            "group": "test"
+        },
+        {
+            "label": "Clean: Data Directory",
+            "type": "shell",
+            "command": "rm",
+            "windows": {
+                "command": "rmdir"
+            },
+            "args": [
+                "-rf",
+                "data/temp/*"
+            ],
+            "windows": {
+                "args": [
+                    "/s",
+                    "/q",
+                    "data\\temp"
+                ]
+            },
+            "group": "build"
+        },
+        {
+            "label": "Clean: Python Cache",
+            "type": "shell",
+            "command": "find",
+            "windows": {
+                "command": "for"
+            },
+            "args": [
+                ".",
+                "-name",
+                "*.pyc",
+                "-delete"
+            ],
+            "windows": {
+                "args": [
+                    "/r",
+                    ".",
+                    "%i",
+                    "in",
+                    "(*.pyc)",
+                    "do",
+                    "del",
+                    "\"%i\""
+                ]
+            },
+            "group": "build"
+        },
+        {
+            "label": "Development: Full Setup",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "Setup: Create Virtual Environment",
+                "Setup: Install Dependencies"
+            ],
+            "group": "build"
+        }
+    ]
+}

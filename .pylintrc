@@ -1,0 +1,56 @@
+[MASTER]
+# Extension packages with C extensions that Pylint can't analyze
+extension-pkg-whitelist=pyk4a,cv2,numpy,open3d
+
+[MESSAGES CONTROL]
+# Disable specific warnings for external libraries
+disable=
+    no-member,          # For pyk4a, cv2, open3d dynamic attributes
+    import-error,       # For optional imports
+    too-many-arguments, # Allow many args for configuration
+    too-many-instance-attributes, # Allow complex classes
+    too-few-public-methods, # Allow simple classes
+    
+# Enable specific checks
+enable=
+    unused-import,
+    unused-variable,
+    undefined-variable
+
+[BASIC]
+# Good variable names
+good-names=i,j,k,ex,Run,_,x,y,z,fx,fy,cx,cy,pcd,rgbd,vis
+
+[DESIGN]
+# Allow reasonable complexity
+max-args=10
+max-locals=20
+max-branches=15
+max-statements=50
+
+[FORMAT]
+# Match Black formatter
+max-line-length=88
+
+[SIMILARITIES]
+# Minimum lines number of a similarity.
+min-similarity-lines=10
+
+[TYPECHECK]
+# List of members which are set dynamically and missed by pylint inference
+generated-members=
+    pyk4a.*,
+    cv2.*,
+    numpy.*,
+    open3d.*
+
+# Ignore missing members for these modules
+ignored-modules=
+    pyk4a,
+    cv2,
+    numpy,
+    open3d
+
+[VARIABLES]
+# Allow unused arguments (common in callbacks)
+dummy-variables-rgx=_.*|dummy.*

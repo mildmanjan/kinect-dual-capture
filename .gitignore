@@ -1,0 +1,26 @@
+# Virtual Environment (NEVER upload this!)
+venv/
+env/
+ENV/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Large data files
+data/
+*.ply
+*.pcd
+*.obj
+*.npy
+*.jpg
+*.png
+
+# Personal config
+config/dual_kinect_calibration.json
+
+# OS files
+.DS_Store
+Thumbs.db
