@@ -1,0 +1,50 @@
+{
+  "transformation_matrix": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.22162301587301586
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      0.026160714285714315
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.2330000000000001
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "device1_intrinsics": {
+    "fx": 504.0,
+    "fy": 504.0,
+    "cx": 320.0,
+    "cy": 288.0,
+    "width": 640,
+    "height": 576
+  },
+  "device2_intrinsics": {
+    "fx": 504.0,
+    "fy": 504.0,
+    "cx": 320.0,
+    "cy": 288.0,
+    "width": 640,
+    "height": 576
+  },
+  "calibration_error": 0.0,
+  "calibration_method": "improved_feature_matching_icp",
+  "calibration_timestamp": 1753709385.1835973,
+  "device1_id": 0,
+  "device2_id": 1,
+  "num_calibration_frames": 5
+}

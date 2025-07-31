@@ -1,0 +1,50 @@
+{
+  "calibration_error": 999.0,
+  "calibration_method": "none",
+  "calibration_timestamp": 1753881026.868295,
+  "device1_id": 0,
+  "device2_id": 1,
+  "num_calibration_frames": 0,
+  "transformation_matrix": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "device1_intrinsics": {
+    "fx": 504.0,
+    "fy": 504.0,
+    "cx": 320.0,
+    "cy": 288.0,
+    "width": 640,
+    "height": 576
+  },
+  "device2_intrinsics": {
+    "fx": 504.0,
+    "fy": 504.0,
+    "cx": 320.0,
+    "cy": 288.0,
+    "width": 640,
+    "height": 576
+  }
+}
